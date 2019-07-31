@@ -1,0 +1,272 @@
+@charset "ISO-8859-1";
+html
+{
+	min-height: 100%;
+	
+}	
+body
+{
+	background: linear-gradient(to bottom, #F0F8FF,  #4682b4);
+	font-family: Times, sans-serif;
+	min-height: 100%
+}
+
+.wrapper
+{
+	box-shadow: 2px 2px 2px 2px grey;
+	background: white;
+	width: 55em;
+	height: auto;
+    margin-right: auto;
+    margin-left: auto;
+    overflow: auto;
+}
+#headerimg
+{
+	width: 100%
+}
+header h1
+{
+	size: 1.5em;
+	color: #696969;
+	text-shadow: 2px #696969;
+	text-align: center;
+}
+
+nav
+{
+	border-top: 3px solid blue;
+	border-bottom: 1px solid #c8c8c8;
+	background: #f7f7f7;
+}
+nav ul, aside ul
+{
+	list-style-type: none;
+	margin: 0;
+	padding: .5em;
+}
+#menu-item
+{
+	text-transform: uppercase;
+	color: blue;
+	display: inline-block;
+	border-right: 1px solid #c8c8c8;
+	padding: .5em;
+}
+nav a:hover
+{
+	color: #f7f7f7;
+	background: blue;
+}
+#main
+{
+	width: 62.5%;
+	float: left;
+	height: auto;
+	border-radius: 15px;
+	background-color: #cccccc;
+	margin-left: 10px;
+	padding:5px;
+	margin-bottom: 25px;
+	box-sizing:border-box;
+}
+
+#main-link:link
+{
+	color: red;
+	font-weight: bold;
+	text-decoration: none;
+}
+#main-link:hover
+{
+	text-decoration: underline;
+}
+#main-link:visited
+{
+	color: magenta;
+}
+p
+{
+	line-height: 1.5;
+}
+#book
+{
+	float: left;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+.books
+{
+	float: left;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.mainpara
+{
+	margin-bottom: 10px;
+}
+.sections
+{
+	position: relative;
+	padding-bottom: 10px;
+	border-bottom: 2px solid #696969;
+
+}
+aside
+{
+	width: 28%;
+	float: right;
+	background: #f7f7f7;
+	border-radius: 15px;
+	padding: 1.5em;
+	margin-right: 10px;
+	
+}
+aside h2
+{
+ 	color: darkblue;
+ 	text-transform: uppercase;
+ 	text-align: center;
+ 	padding: 0;
+ 	margin: 5px;
+}
+#sidebar a
+{
+	text-align: center;
+	color: darkblue;
+	text-decoration: none;
+	line-height: 1.5;
+}
+
+#sidebar-link:hover
+{
+ 	text-decoration: underline;
+}
+footer
+{
+  position: static;
+  bottom: 0;
+  border-top: 1px solid #696969;
+  width:55em; 
+  text-align: center;
+  margin: 0 auto;
+  overflow: hidden;
+}
+footer img 
+{
+  height: 75px;
+  width: 75px;
+  padding:1px;
+}
+footer img:hover
+{
+	opacity: .7;
+}
+
+footer p
+{
+	font-size: 85%;
+	color: #696969
+}
+.footer-item
+{
+	display: inline-block;
+	border-right: 1px solid #c8c8c8;
+	padding: .5em;
+	text-align: center;
+}
+footer a
+{
+	text-decoration: none;
+}
+
+.footer-item:hover
+{
+	text-decoration: underline;
+}
+
+.table
+{
+	font-family: "Trebuchet MS", sans-serif;
+	margin:10px auto;
+	border-collapse:collapse; 
+	padding:10px 5px;
+	border-style:solid;
+	border-width:3px;
+	overflow:hidden;
+	word-break:normal;
+	border-color:#1e90ff;
+	color:black;
+}
+.table td
+{ 
+	padding:3px; 
+	border:#4e95f4 1px solid;
+}
+.table tr
+{
+	background: #b8d1f3;
+}
+.table tr:nth-child(odd)
+{ 
+	background: white;
+}
+.table tr:nth-child(even)
+{
+	background: linear-gradient(to bottom, #F0F8FF, #b0e0e6);;
+}
+
+.table th
+{		
+	padding:5px 5px;
+	text-align: left;
+	border-style:solid;
+	border-width:1px;
+	overflow:hidden;
+	word-break:normal;
+	border-color:#1e90ff;
+	color:#fff;
+	background-color:#1e90ff;
+}
+#required
+{
+	color: red;
+	font-weight: bold;
+}
+#mycontact
+{
+	width: 100%;
+	background-color:blue;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+}
+.contact
+{
+	font-family: Verdana, sand-serif;
+	width: 95%;
+	color: black;
+	margin: 0 auto;
+	background-color: white;
+	padding: 5px;
+}
+.contact input, textarea
+{
+	color: grey;
+}
+.submit
+{
+	color: white;
+	font-weight:bold;
+	background: linear-gradient(to bottom, #b8d1f3, blue);
+	padding: 10px 15px;
+	border-radius: 5px;
+	text-align: center;
+	cursor: pointer;
+}
+.submit:hover
+{
+	background: linear-gradient(to top, #b8d1f3, blue);
+	
+}
