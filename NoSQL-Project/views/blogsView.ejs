@@ -1,0 +1,62 @@
+<% include partials/header %>
+
+<h1>Add Blog:</h1>
+<% if(errors != undefined){ %>
+<ul>
+<% errors.forEach(function(error){ %>
+<li style="color:red"><%= error.msg %></li>
+<% }) %>
+</ul>
+<% } %>
+
+<form method="POST" action="/blogs/add">
+    <label>Title:</label><br>
+    <input type="text" name="title"><br>
+    <label>Body:</label><br>
+    <textarea name="body" rows="5", cols="50"></textarea><br>
+    <label>Slug:</label><br>
+    <input type="text" name="slug"><br>
+    <label>Author:</label><br>
+    <select name="author">
+            <option value="5d136890526f6104e6728b97">Michael</option>
+            <option value="5d136bf73b6e67052e15571e">Pam</option>
+            <option value="5d1418d23faa070576a6095a">John</option>
+            <option value="5d14ba283faa070576a6095c">Tulio</option>
+    </select><br>
+    <label>Comments:</label><br>
+    <textarea name="comments" rows="5", cols="50"></textarea><br>
+    <label>Category:</label><br>
+    <input type="text" name="category"><br>
+    <br>
+    <input type="submit" value="Submit">
+    </form>
+
+<h1>Blogs:</h1>
+<ul style="list-style:none;">
+    <% blogs.forEach(function(blog){ %>
+    <li><h3><%= blog.title %></h3></li>
+    <li>Author:<%= blog.author.name %></li>
+    <li>Body:<%= blog.body %></li>
+    <li>Slug:<%= blog.slug %></li>
+    <li><strong>Comments:</strong>
+        <ul>
+            <% var comms = blog.comments[0].comment; %>
+            <li><%= comms %>
+            <% var posted = blog.comments[0].created_at; %>
+            (<%= posted.toDateString() %>) </li>
+            
+        </ul>
+    </li>
+    <li><strong>Categories:</strong>
+        <ul>
+            <% var cats = blog.category.forEach(function(category){ %>
+                 <li> <%= category.name %> </li>
+            <% }) %>
+        </ul>
+    </li>
+    <a href='/blogs/edit/<%= blog. _id %>'>Edit</a>&nbsp;
+    <form method="post" action="/blogs/delete/<%= blog._id %>"><input type="submit" name="delete" value='Delete' onClick="return confirm('Are you sure you want to delete?')" /><input type="hidden" name="_method" value="DELETE" /></form>
+    <% }) %>
+</ul>
+
+<% include partials/footer %>

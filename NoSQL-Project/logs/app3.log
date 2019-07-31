@@ -1,0 +1,1 @@
+{"message":"::ffff:192.168.22.4 - - [01/Jul/2019:05:15:33 +0000] \"POST /blogs/add HTTP/1.1\" - - \"https://csc570e.uis.edu:9446/blogs\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36\"\n","level":"info"}

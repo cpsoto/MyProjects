@@ -1,0 +1,34 @@
+<% include partials/header %>
+
+<h1>Edit Blog:</h1>
+<% if(errors != undefined){ %>
+<ul>
+<% errors.forEach(function(error){ %>
+<li style="color:red"><%= error.msg %></li>
+<% }) %>
+</ul>
+<% } %>
+
+<form method="POST" action="/blogs/edit/<%= blog. _id %>">
+<input type="hidden" name="_method" value="PUT" />
+<label>Title:</label><br>
+<input type="text" name="title" value="<%= blog.title %>"><br>
+<label>Body:</label><br>
+<textarea name="body" rows="6", cols="60"><%= blog.body %></textarea><br>
+<label>Slug:</label><br>
+<input type="text" name="slug" value="<%= blog.slug %>"><br>
+<label>Author:</label><br>
+<select name="author">
+        <option <%= (blog.author == '5d136890526f6104e6728b97')?'selected':'' %> value ="5d136890526f6104e6728b97" >Michael</option>
+        <option <%= (blog.author == '5d136bf73b6e67052e15571e')?'selected':'' %> value ="5d136bf73b6e67052e15571e" >Pam</option>
+        <option <%= (blog.author == '5d1418d23faa070576a6095a')?'selected':'' %> value ="5d1418d23faa070576a6095a" >John</option>
+        <option <%= (blog.author == '5d14ba283faa070576a6095c')?'selected':'' %> value ="5d14ba283faa070576a6095c" >Tulio</option>
+</select><br>
+<label><strong>Comments:</strong></label><br>
+<textarea name="comment"> <%= blog.comments[0].comment %></textarea> (<%= blog.comments[0].created_at.toDateString() %>)<br>
+<label><strong>Category:</strong></label><br>
+<input name="category" value="<%= blog.category[0].name %>"> </input><br>
+<input type="submit" value="Edit">
+</form>
+
+<% include partials/footer %>
