@@ -1,1 +1,1 @@
-CRUD operations web app using MongoDB built on Nodejs/Expressjs/Mongoose.
+CRUD operations web api using MongoDB built on Nodejs/Expressjs/Mongoose.
